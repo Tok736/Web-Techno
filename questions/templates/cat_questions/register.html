@@ -1,0 +1,63 @@
+{% extends 'cat_questions/base.html' %}
+
+{% block title %}
+Register - {{block.super}}
+{% endblock %}
+
+
+{% block content %}
+
+<div style="height: 30px;"></div>
+<div class="card mb-4">
+    <div class="card-header text-muted">
+        Register
+    </div>
+    <div class="card-body">
+        <form>
+
+            <div class="form-group row mt-3">
+                <label for="exampleInputLogin" class="col-sm-2 col-form-label">Login</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="exampleInputLogin" placeholder="enter login">
+                </div>
+            </div>
+
+
+            <div class="form-group row mt-3">
+                <label for="exampleInputEmail1" class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="enter email">
+                </div>
+            </div>
+
+            <div class="form-group row mt-3">
+                <label for="exampleInputLogin" class="col-sm-2 col-form-label">Nick</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="exampleInputLogin" placeholder="enter nick">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+                <div class="col-sm-10">
+                    <input type="password" class="form-control" id="inputPassword" placeholder="enter password">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="inputPassword" class="col-sm-2 col-form-label">Repeat</label>
+                <div class="col-sm-10">
+                    <input type="password" class="form-control" id="inputPassword" placeholder="enter password">
+                </div>
+            </div>
+
+
+            <div class="custom-file mt-4 mb-3">
+                <input type="file" class="custom-file-input" id="customFile">
+                <label class="custom-file-label" for="customFile">Choose avatar</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

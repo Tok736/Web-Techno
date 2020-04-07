@@ -1,0 +1,31 @@
+{% extends 'cat_questions/base.html' %}
+
+
+
+{% block content %}
+
+
+<h1 class="mt-5">Ask</h1>
+
+
+<form action="{%  url 'ask_page_url' %}" method="post">
+    <div class="form-group">
+        {{ form.title.label }}
+        {{ form.title }}
+        <!-- <input class="form-control" placeholder="title"> -->
+    </div>
+    
+    <div class="form-group">
+        {{ form.body.label }}
+        {{ form.body }}
+        <!-- <label for="exampleFormControlTextarea1">Question</label> -->
+        <!-- <textarea class="form-control" id="exampleFormControlTextarea1" rows="9" placeholder="enter your question"></textarea> -->
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlInput1">Tags</label>
+        <input class="form-control" placeholder="tags">
+    </div>
+    <button type="submit" class="btn btn-primary">Ask</button>
+</form>
+
+{% endblock %}

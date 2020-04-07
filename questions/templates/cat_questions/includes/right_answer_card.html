@@ -1,0 +1,20 @@
+<div class="card mb-4" style="background-color: #F8FFF8;">
+    <div class="card-header" style="background-color: #E4FBE4;">
+        {{ right_answer.author.nickName }} - <span class="text-muted">{{right_answer.date_pub}}     - Aproved <i class="fas fa-check"></i> </span>
+    </div>
+    <div class="card-body">
+        <p class="card-text">{{right_answer.body }}</p>
+    </div>
+
+    <div class="">
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-outline-success ml-3 mr-1 mb-3"
+                style="border-radius: 0; border: 1px solid #DFDFDF"><i class="fas fa-thumbs-up"></i></button>
+            <button type="button" class="btn btn-outline-danger ml-1 mr-1 mb-3"
+                style="border-radius: 0; border: 1px solid #DFDFDF"><i class="fas fa-thumbs-down"></i></button>
+            <div style="float: left; height: 38px; padding: 6px 12px; border: 1px solid #DFDFDF;"><span
+                    class="badge badge-light">{{right_answer.rating}}</span>
+            </div>
+        </div>
+    </div>
+</div>

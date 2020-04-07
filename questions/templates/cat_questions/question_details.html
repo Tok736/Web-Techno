@@ -1,0 +1,41 @@
+{% extends 'cat_questions/base.html' %}
+
+
+{% block title %}
+{{block.super}}
+{% endblock %}
+
+
+
+{% block content %}
+
+<div style="height: 30px;"></div>
+<p class="text-muted mt-2">{{question.date_pub}}</p>
+<h1 class="mt-2 mb-4">{{question.title}}</h1>
+<p>{{question.body}}</p>
+
+
+
+{% include 'cat_questions/includes/right_answer_card.html' %}
+
+
+
+{% for answer in question.answers.all %}
+
+{% include 'cat_questions/includes/answer_card.html' %}
+
+{% endfor %}
+
+
+<form class="mb-5">
+    <div class="form-group">
+        <label for="exampleFormControlTextarea1">Comment</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"
+            placeholder="enter your comment"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+{% endblock %}
+
+

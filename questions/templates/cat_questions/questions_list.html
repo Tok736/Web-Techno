@@ -1,0 +1,33 @@
+{% extends 'cat_questions/base.html' %}
+
+
+{% block title %}
+{{block.super}}
+{% endblock %}
+
+
+{% block content %}
+<h1 class="mt-4 mb-2">Questions</h1>
+<div class="ml-2 mb-2"><a class="text-muted" href="{% url 'questions_list_hot_url' %}">hot</a> <span
+        class="text-muted">|</span> <a class="text-muted" href="{% url 'questions_list_newest_url' %}">newest</a></div>
+
+{% for question in questions %}
+{% include 'cat_questions/includes/card.html' %}
+
+{% endfor %}
+
+
+<div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+    <div class="btn-group mr-2" role="group" aria-label="First group">
+        {% if questions.has_previous %}
+        <a href="?page={{ questions.previous_page_number }}"><button type="button" class="btn btn-light"><i
+                    class="fas fa-caret-left"></i></button></a>
+        {% endif %}
+        {% if questions.has_next %}
+        <a href="?page={{ questions.next_page_number }}"><button type="button" class="btn btn-light"><i
+                    class="fas fa-caret-right"></i></button></a>
+        {% endif %}
+    </div>
+</div>
+
+{% endblock %}
